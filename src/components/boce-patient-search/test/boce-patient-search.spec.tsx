@@ -10,7 +10,9 @@ describe('boce-patient-search', () => {
     expect(page.root).toEqualHtml(`
       <boce-patient-search>
         <mock:shadow-root>
-          <slot></slot>
+        <h1>
+               hladanie pacienta
+             </h1>
         </mock:shadow-root>
       </boce-patient-search>
     `);

@@ -1,5 +1,4 @@
 import { Component, Event, EventEmitter,  Host, h } from '@stencil/core';
-import '@material/web/button/elevated-button';
 
 @Component({
   tag: 'boce-login',

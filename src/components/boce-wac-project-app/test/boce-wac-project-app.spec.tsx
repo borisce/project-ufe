@@ -10,7 +10,7 @@ describe('boce-wac-project-app', () => {
     expect(page.root).toEqualHtml(`
       <boce-wac-project-app>
         <mock:shadow-root>
-          <slot></slot>
+        <boce-doctor-patients-list></boce-doctor-patients-list>
         </mock:shadow-root>
       </boce-wac-project-app>
     `);

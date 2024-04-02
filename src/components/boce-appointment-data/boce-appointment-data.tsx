@@ -1,5 +1,4 @@
 import { Component, Host, Prop, State, h, EventEmitter, Event } from '@stencil/core';
-import '@material/web/button/elevated-button';
 
 @Component({
   tag: 'boce-appointment-data',
