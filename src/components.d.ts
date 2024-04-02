@@ -6,56 +6,346 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface BoceAppointmentData {
+        "match": any;
+    }
+    interface BoceCreatePatient {
+        "entryId": string;
+    }
+    interface BoceCreateTerm {
+    }
+    interface BoceDoctorPatientsList {
+    }
+    interface BoceLogin {
+    }
+    interface BoceMyAppointments {
+    }
+    interface BocePatientData {
+    }
+    interface BocePatientSearch {
+    }
+    interface BocePlannedAppointments {
+    }
+    interface BoceReserveAppointment {
+    }
+    interface BoceWacProjectApp {
+        "basePath": string;
     }
 }
+export interface BoceAppointmentDataCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceAppointmentDataElement;
+}
+export interface BoceCreatePatientCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceCreatePatientElement;
+}
+export interface BoceCreateTermCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceCreateTermElement;
+}
+export interface BoceDoctorPatientsListCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceDoctorPatientsListElement;
+}
+export interface BoceLoginCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceLoginElement;
+}
+export interface BoceMyAppointmentsCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceMyAppointmentsElement;
+}
+export interface BocePatientDataCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBocePatientDataElement;
+}
+export interface BocePlannedAppointmentsCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBocePlannedAppointmentsElement;
+}
+export interface BoceReserveAppointmentCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBoceReserveAppointmentElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLBoceAppointmentDataElementEventMap {
+        "editor-closed": string;
+        "logout-clicked": string;
+        "patientdetail-clicked": string;
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    interface HTMLBoceAppointmentDataElement extends Components.BoceAppointmentData, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceAppointmentDataElementEventMap>(type: K, listener: (this: HTMLBoceAppointmentDataElement, ev: BoceAppointmentDataCustomEvent<HTMLBoceAppointmentDataElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceAppointmentDataElementEventMap>(type: K, listener: (this: HTMLBoceAppointmentDataElement, ev: BoceAppointmentDataCustomEvent<HTMLBoceAppointmentDataElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceAppointmentDataElement: {
+        prototype: HTMLBoceAppointmentDataElement;
+        new (): HTMLBoceAppointmentDataElement;
+    };
+    interface HTMLBoceCreatePatientElementEventMap {
+        "create-closed": string;
+        "patient-created": string;
+        "logout-clicked": string;
+    }
+    interface HTMLBoceCreatePatientElement extends Components.BoceCreatePatient, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceCreatePatientElementEventMap>(type: K, listener: (this: HTMLBoceCreatePatientElement, ev: BoceCreatePatientCustomEvent<HTMLBoceCreatePatientElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceCreatePatientElementEventMap>(type: K, listener: (this: HTMLBoceCreatePatientElement, ev: BoceCreatePatientCustomEvent<HTMLBoceCreatePatientElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceCreatePatientElement: {
+        prototype: HTMLBoceCreatePatientElement;
+        new (): HTMLBoceCreatePatientElement;
+    };
+    interface HTMLBoceCreateTermElementEventMap {
+        "createterm-closed": string;
+        "term-created": string;
+        "logout-clicked": string;
+    }
+    interface HTMLBoceCreateTermElement extends Components.BoceCreateTerm, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceCreateTermElementEventMap>(type: K, listener: (this: HTMLBoceCreateTermElement, ev: BoceCreateTermCustomEvent<HTMLBoceCreateTermElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceCreateTermElementEventMap>(type: K, listener: (this: HTMLBoceCreateTermElement, ev: BoceCreateTermCustomEvent<HTMLBoceCreateTermElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceCreateTermElement: {
+        prototype: HTMLBoceCreateTermElement;
+        new (): HTMLBoceCreateTermElement;
+    };
+    interface HTMLBoceDoctorPatientsListElementEventMap {
+        "entry-clicked": string;
+        "new-clicked": string;
+        "search-clicked": string;
+        "logout-clicked": string;
+        "newterm-clicked": string;
+    }
+    interface HTMLBoceDoctorPatientsListElement extends Components.BoceDoctorPatientsList, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceDoctorPatientsListElementEventMap>(type: K, listener: (this: HTMLBoceDoctorPatientsListElement, ev: BoceDoctorPatientsListCustomEvent<HTMLBoceDoctorPatientsListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceDoctorPatientsListElementEventMap>(type: K, listener: (this: HTMLBoceDoctorPatientsListElement, ev: BoceDoctorPatientsListCustomEvent<HTMLBoceDoctorPatientsListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceDoctorPatientsListElement: {
+        prototype: HTMLBoceDoctorPatientsListElement;
+        new (): HTMLBoceDoctorPatientsListElement;
+    };
+    interface HTMLBoceLoginElementEventMap {
+        "doctor-logged": string;
+        "reserve-clicked": string;
+    }
+    interface HTMLBoceLoginElement extends Components.BoceLogin, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceLoginElementEventMap>(type: K, listener: (this: HTMLBoceLoginElement, ev: BoceLoginCustomEvent<HTMLBoceLoginElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceLoginElementEventMap>(type: K, listener: (this: HTMLBoceLoginElement, ev: BoceLoginCustomEvent<HTMLBoceLoginElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceLoginElement: {
+        prototype: HTMLBoceLoginElement;
+        new (): HTMLBoceLoginElement;
+    };
+    interface HTMLBoceMyAppointmentsElementEventMap {
+        "logout-clicked": string;
+        "planned-clicked": string;
+        "available-clicked": string;
+    }
+    interface HTMLBoceMyAppointmentsElement extends Components.BoceMyAppointments, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceMyAppointmentsElementEventMap>(type: K, listener: (this: HTMLBoceMyAppointmentsElement, ev: BoceMyAppointmentsCustomEvent<HTMLBoceMyAppointmentsElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceMyAppointmentsElementEventMap>(type: K, listener: (this: HTMLBoceMyAppointmentsElement, ev: BoceMyAppointmentsCustomEvent<HTMLBoceMyAppointmentsElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceMyAppointmentsElement: {
+        prototype: HTMLBoceMyAppointmentsElement;
+        new (): HTMLBoceMyAppointmentsElement;
+    };
+    interface HTMLBocePatientDataElementEventMap {
+        "entry-clicked": string;
+        "logout-clicked": string;
+        "list-clicked": string;
+    }
+    interface HTMLBocePatientDataElement extends Components.BocePatientData, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBocePatientDataElementEventMap>(type: K, listener: (this: HTMLBocePatientDataElement, ev: BocePatientDataCustomEvent<HTMLBocePatientDataElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBocePatientDataElementEventMap>(type: K, listener: (this: HTMLBocePatientDataElement, ev: BocePatientDataCustomEvent<HTMLBocePatientDataElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBocePatientDataElement: {
+        prototype: HTMLBocePatientDataElement;
+        new (): HTMLBocePatientDataElement;
+    };
+    interface HTMLBocePatientSearchElement extends Components.BocePatientSearch, HTMLStencilElement {
+    }
+    var HTMLBocePatientSearchElement: {
+        prototype: HTMLBocePatientSearchElement;
+        new (): HTMLBocePatientSearchElement;
+    };
+    interface HTMLBocePlannedAppointmentsElementEventMap {
+        "logout-clicked": string;
+        "reserve-clicked": string;
+    }
+    interface HTMLBocePlannedAppointmentsElement extends Components.BocePlannedAppointments, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBocePlannedAppointmentsElementEventMap>(type: K, listener: (this: HTMLBocePlannedAppointmentsElement, ev: BocePlannedAppointmentsCustomEvent<HTMLBocePlannedAppointmentsElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBocePlannedAppointmentsElementEventMap>(type: K, listener: (this: HTMLBocePlannedAppointmentsElement, ev: BocePlannedAppointmentsCustomEvent<HTMLBocePlannedAppointmentsElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBocePlannedAppointmentsElement: {
+        prototype: HTMLBocePlannedAppointmentsElement;
+        new (): HTMLBocePlannedAppointmentsElement;
+    };
+    interface HTMLBoceReserveAppointmentElementEventMap {
+        "reserve-clicked": string;
+        "logout-clicked": string;
+    }
+    interface HTMLBoceReserveAppointmentElement extends Components.BoceReserveAppointment, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBoceReserveAppointmentElementEventMap>(type: K, listener: (this: HTMLBoceReserveAppointmentElement, ev: BoceReserveAppointmentCustomEvent<HTMLBoceReserveAppointmentElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBoceReserveAppointmentElementEventMap>(type: K, listener: (this: HTMLBoceReserveAppointmentElement, ev: BoceReserveAppointmentCustomEvent<HTMLBoceReserveAppointmentElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBoceReserveAppointmentElement: {
+        prototype: HTMLBoceReserveAppointmentElement;
+        new (): HTMLBoceReserveAppointmentElement;
+    };
+    interface HTMLBoceWacProjectAppElement extends Components.BoceWacProjectApp, HTMLStencilElement {
+    }
+    var HTMLBoceWacProjectAppElement: {
+        prototype: HTMLBoceWacProjectAppElement;
+        new (): HTMLBoceWacProjectAppElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "boce-appointment-data": HTMLBoceAppointmentDataElement;
+        "boce-create-patient": HTMLBoceCreatePatientElement;
+        "boce-create-term": HTMLBoceCreateTermElement;
+        "boce-doctor-patients-list": HTMLBoceDoctorPatientsListElement;
+        "boce-login": HTMLBoceLoginElement;
+        "boce-my-appointments": HTMLBoceMyAppointmentsElement;
+        "boce-patient-data": HTMLBocePatientDataElement;
+        "boce-patient-search": HTMLBocePatientSearchElement;
+        "boce-planned-appointments": HTMLBocePlannedAppointmentsElement;
+        "boce-reserve-appointment": HTMLBoceReserveAppointmentElement;
+        "boce-wac-project-app": HTMLBoceWacProjectAppElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface BoceAppointmentData {
+        "match"?: any;
+        "onEditor-closed"?: (event: BoceAppointmentDataCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BoceAppointmentDataCustomEvent<string>) => void;
+        "onPatientdetail-clicked"?: (event: BoceAppointmentDataCustomEvent<string>) => void;
+    }
+    interface BoceCreatePatient {
+        "entryId"?: string;
+        "onCreate-closed"?: (event: BoceCreatePatientCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BoceCreatePatientCustomEvent<string>) => void;
+        "onPatient-created"?: (event: BoceCreatePatientCustomEvent<string>) => void;
+    }
+    interface BoceCreateTerm {
+        "onCreateterm-closed"?: (event: BoceCreateTermCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BoceCreateTermCustomEvent<string>) => void;
+        "onTerm-created"?: (event: BoceCreateTermCustomEvent<string>) => void;
+    }
+    interface BoceDoctorPatientsList {
+        "onEntry-clicked"?: (event: BoceDoctorPatientsListCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BoceDoctorPatientsListCustomEvent<string>) => void;
+        "onNew-clicked"?: (event: BoceDoctorPatientsListCustomEvent<string>) => void;
+        "onNewterm-clicked"?: (event: BoceDoctorPatientsListCustomEvent<string>) => void;
+        "onSearch-clicked"?: (event: BoceDoctorPatientsListCustomEvent<string>) => void;
+    }
+    interface BoceLogin {
+        "onDoctor-logged"?: (event: BoceLoginCustomEvent<string>) => void;
+        "onReserve-clicked"?: (event: BoceLoginCustomEvent<string>) => void;
+    }
+    interface BoceMyAppointments {
+        "onAvailable-clicked"?: (event: BoceMyAppointmentsCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BoceMyAppointmentsCustomEvent<string>) => void;
+        "onPlanned-clicked"?: (event: BoceMyAppointmentsCustomEvent<string>) => void;
+    }
+    interface BocePatientData {
+        "onEntry-clicked"?: (event: BocePatientDataCustomEvent<string>) => void;
+        "onList-clicked"?: (event: BocePatientDataCustomEvent<string>) => void;
+        "onLogout-clicked"?: (event: BocePatientDataCustomEvent<string>) => void;
+    }
+    interface BocePatientSearch {
+    }
+    interface BocePlannedAppointments {
+        "onLogout-clicked"?: (event: BocePlannedAppointmentsCustomEvent<string>) => void;
+        "onReserve-clicked"?: (event: BocePlannedAppointmentsCustomEvent<string>) => void;
+    }
+    interface BoceReserveAppointment {
+        "onLogout-clicked"?: (event: BoceReserveAppointmentCustomEvent<string>) => void;
+        "onReserve-clicked"?: (event: BoceReserveAppointmentCustomEvent<string>) => void;
+    }
+    interface BoceWacProjectApp {
+        "basePath"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "boce-appointment-data": BoceAppointmentData;
+        "boce-create-patient": BoceCreatePatient;
+        "boce-create-term": BoceCreateTerm;
+        "boce-doctor-patients-list": BoceDoctorPatientsList;
+        "boce-login": BoceLogin;
+        "boce-my-appointments": BoceMyAppointments;
+        "boce-patient-data": BocePatientData;
+        "boce-patient-search": BocePatientSearch;
+        "boce-planned-appointments": BocePlannedAppointments;
+        "boce-reserve-appointment": BoceReserveAppointment;
+        "boce-wac-project-app": BoceWacProjectApp;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "boce-appointment-data": LocalJSX.BoceAppointmentData & JSXBase.HTMLAttributes<HTMLBoceAppointmentDataElement>;
+            "boce-create-patient": LocalJSX.BoceCreatePatient & JSXBase.HTMLAttributes<HTMLBoceCreatePatientElement>;
+            "boce-create-term": LocalJSX.BoceCreateTerm & JSXBase.HTMLAttributes<HTMLBoceCreateTermElement>;
+            "boce-doctor-patients-list": LocalJSX.BoceDoctorPatientsList & JSXBase.HTMLAttributes<HTMLBoceDoctorPatientsListElement>;
+            "boce-login": LocalJSX.BoceLogin & JSXBase.HTMLAttributes<HTMLBoceLoginElement>;
+            "boce-my-appointments": LocalJSX.BoceMyAppointments & JSXBase.HTMLAttributes<HTMLBoceMyAppointmentsElement>;
+            "boce-patient-data": LocalJSX.BocePatientData & JSXBase.HTMLAttributes<HTMLBocePatientDataElement>;
+            "boce-patient-search": LocalJSX.BocePatientSearch & JSXBase.HTMLAttributes<HTMLBocePatientSearchElement>;
+            "boce-planned-appointments": LocalJSX.BocePlannedAppointments & JSXBase.HTMLAttributes<HTMLBocePlannedAppointmentsElement>;
+            "boce-reserve-appointment": LocalJSX.BoceReserveAppointment & JSXBase.HTMLAttributes<HTMLBoceReserveAppointmentElement>;
+            "boce-wac-project-app": LocalJSX.BoceWacProjectApp & JSXBase.HTMLAttributes<HTMLBoceWacProjectAppElement>;
         }
     }
 }
