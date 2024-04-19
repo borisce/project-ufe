@@ -39,7 +39,7 @@ jobs:
         uses: docker/metadata-action@v3
         with: 
           images: |
-            boriscernak/project-ufe
+            boriscernak/wac-project
           tags: |
             type=schedule
 
